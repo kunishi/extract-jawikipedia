@@ -2,7 +2,7 @@
 
 datadir=$HOME/data
 infile=$1
-outdir=${datadir}/extracted-`date +%Y%m%d`
+outdir=${infile%/*}/extracted-`date +%Y%m%d`
 
 [[ ! -d wikiextractor ]] && \
   git clone https://github.com/attardi/wikiextractor.git
